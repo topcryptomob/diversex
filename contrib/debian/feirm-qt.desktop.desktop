@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=DiverseX
+Comment=DiverseX P2P Cryptocurrency
+Exec=diversex-qt %u
+Terminal=false
+Type=Application
+Icon=diversex128
+MimeType=x-scheme-handler/diversex;
+Categories=Office;Finance;
+Name[en_US]=diversex-qt.desktop

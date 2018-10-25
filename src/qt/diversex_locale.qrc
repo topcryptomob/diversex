@@ -1,0 +1,29 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/diversex_bg.qm</file>
+        <file alias="ca">locale/diversex_ca.qm</file>
+        <file alias="cs">locale/diversex_cs.qm</file>
+        <file alias="da">locale/diversex_da.qm</file>
+        <file alias="de">locale/diversex_de.qm</file>
+        <file alias="en">locale/diversex_en.qm</file>
+        <file alias="en_US">locale/diversex_en_US.qm</file>
+        <file alias="es">locale/diversex_es.qm</file>
+        <file alias="fi">locale/diversex_fi.qm</file>
+        <file alias="fr_FR">locale/diversex_fr_FR.qm</file>
+        <file alias="it">locale/diversex_it.qm</file>
+        <file alias="ja">locale/diversex_ja.qm</file>
+        <file alias="ko_KR">locale/diversex_ko_KR.qm</file>
+        <file alias="nl">locale/diversex_nl.qm</file>
+        <file alias="pl">locale/diversex_pl.qm</file>
+        <file alias="pt">locale/diversex_pt.qm</file>
+        <file alias="pt_BR">locale/diversex_pt_BR.qm</file>
+        <file alias="ro_RO">locale/diversex_ro_RO.qm</file>
+        <file alias="ru">locale/diversex_ru.qm</file>
+        <file alias="sk">locale/diversex_sk.qm</file>
+        <file alias="sv">locale/diversex_sv.qm</file>
+        <file alias="tr">locale/diversex_tr.qm</file>
+        <file alias="uk">locale/diversex_uk.qm</file>
+        <file alias="zh_CN">locale/diversex_zh_CN.qm</file>
+        <file alias="zh_TW">locale/diversex_zh_TW.qm</file>
+    </qresource>
+</RCC>

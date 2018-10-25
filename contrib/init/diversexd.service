@@ -1,0 +1,26 @@
+[Unit]
+Description=DiverseX's distributed currency daemon
+After=network.target
+
+[Service]
+User=diversex
+Group=diversex
+
+Type=forking
+PIDFile=/var/lib/diversexd/diversexd.pid
+
+ExecStart=/usr/bin/diversexd -daemon -pid=/var/lib/diversexd/diversexd.pid \
+          -conf=/etc/diversex/diversex.conf -datadir=/var/lib/diversexd
+
+ExecStop=-/usr/bin/diversex-cli -conf=/etc/diversex/diversex.conf \
+         -datadir=/var/lib/diversexd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
