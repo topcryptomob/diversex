@@ -1620,27 +1620,27 @@ int64_t GetBlockValue(int nHeight)
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         if (nHeight < Params().LAST_POW_BLOCK() && nHeight > 0)
-            return 5000 * COIN;
+            return 6250 * COIN;
     }
 
     if (nHeight < Params().LAST_POW_BLOCK())
-        nSubsidy = 5000 * COIN;
-    else if (nHeight <= 5000)
-        nSubsidy = 1 * COIN;
-    else if (nHeight > 5000 && nHeight <= 25000)
-        nSubsidy = 30 * COIN;
-    else if (nHeight > 25000 && nHeight <= 75000)
-        nSubsidy = 20 * COIN;
-    else if (nHeight > 75000 && nHeight <= 100000)
-        nSubsidy = 30 * COIN;
-    else if (nHeight > 100000 && nHeight <= 1050000)
+        nSubsidy = 6250 * COIN; // 1.25M DVRSX Premine across 200 blocks
+    else if (nHeight <= 10000)
         nSubsidy = 10 * COIN;
-    else if (nHeight > 1050000 && nHeight <= 2100000)
+    else if (nHeight > 5000 && nHeight <= 25000)
+        nSubsidy = 15 * COIN;
+    else if (nHeight > 25000 && nHeight <= 88000)
+        nSubsidy = 25 * COIN;
+    else if (nHeight > 88000 && nHeight <= 350000)
+        nSubsidy = 10 * COIN;
+    else if (nHeight > 350000 && nHeight <= 750000)
         nSubsidy = 5 * COIN;
-    else if (nHeight > 2100000 && nHeight <= 3150000)
+    else if (nHeight > 750000 && nHeight <= 1900000)
         nSubsidy = 2.5 * COIN;
+    else if (nHeight > 1900000 && nHeight <= 3400000)
+        nSubsidy = 1.5 * COIN;
     else
-        nSubsidy = 1.25 * COIN;
+        nSubsidy = 0.5 * COIN;
 
     // Check if we reached the coin max supply.
     int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
@@ -1663,7 +1663,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         return 0;
 
     // Check if we reached coin supply
-    ret = blockValue * 0.85; // 85% of block reward
+    ret = blockValue * 0.70; // 70% of block reward
 
     return ret;
 }
