@@ -1625,20 +1625,26 @@ int64_t GetBlockValue(int nHeight)
 
     if (nHeight < Params().LAST_POW_BLOCK())
         nSubsidy = 6250 * COIN; // 1.25M DVRSX Premine across 200 blocks
-    else if (nHeight <= 10000)
+    else if (nHeight <= 12100)
         nSubsidy = 10 * COIN;
-    else if (nHeight > 5000 && nHeight <= 25000)
+    else if (nHeight > 12100 && nHeight <= 24200)
         nSubsidy = 15 * COIN;
-    else if (nHeight > 25000 && nHeight <= 88000)
+    else if (nHeight > 24200 && nHeight <= 56500)
         nSubsidy = 25 * COIN;
-    else if (nHeight > 88000 && nHeight <= 350000)
+    else if (nHeight > 56500 && nHeight <= 92800)
+        nSubsidy = 15 * COIN;
+    else if (nHeight > 92800 && nHeight <= 300000)
         nSubsidy = 10 * COIN;
-    else if (nHeight > 350000 && nHeight <= 750000)
+    else if (nHeight > 300000 && nHeight <= 512000)
         nSubsidy = 5 * COIN;
-    else if (nHeight > 750000 && nHeight <= 1900000)
+    else if (nHeight > 512000 && nHeight <= 721000)
         nSubsidy = 2.5 * COIN;
-    else if (nHeight > 1900000 && nHeight <= 3400000)
+    else if (nHeight > 721000 && nHeight <= 931000)
+        nSubsidy = 2 * COIN;
+    else if (nHeight > 931000 && nHeight <= 1141000)
         nSubsidy = 1.5 * COIN;
+    else if (nHeight > 1141000 && nHeight <= 1350000)
+        nSubsidy = 1 * COIN;
     else
         nSubsidy = 0.5 * COIN;
 
