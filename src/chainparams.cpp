@@ -93,10 +93,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x4d;
-        pchMessageStart[1] = 0xfb;
-        pchMessageStart[2] = 0xa4;
-        pchMessageStart[3] = 0x9f;
+        pchMessageStart[0] = 0x1f;
+        pchMessageStart[1] = 0xea;
+        pchMessageStart[2] = 0x92;
+        pchMessageStart[3] = 0xd6;
         vAlertPubKey = ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284");
         nDefaultPort = 1981;
         bnProofOfWorkLimit = ~uint256(0) >> 1;
@@ -110,7 +110,7 @@ public:
         nTargetSpacing = 2 * 60;  // DiverseX: 2 minutes
         nMaturity = 10;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 100000000 * COIN;
+        nMaxMoneyOut = 12000000 * COIN;
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 200;
@@ -136,7 +136,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0xfe1ac6abb7308803a43f9c9542e59bffe697a2aef3e8e15655dd6f22069e5153"));
 
         // DiverseX addresses start with 'F'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 12);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 30);
         // DiverseX script addresses start with '9'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 57);
         // DiverseX private keys start with '7'
